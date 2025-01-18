@@ -1,0 +1,148 @@
+@import '../../styles/variables';
+
+.myExperienceScreen {
+    width: 100%;
+    background-color: $secondary-color;
+    overflow: hidden;
+
+    h2 {
+        font-size: 3rem;
+        margin: 0;
+        padding-top: 3rem;
+        text-align: center;
+        color: $font-color-1;
+    }
+
+    .experienceDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        padding-top: 5%;
+
+        .experienceCardDiv {
+            width: 60vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .experienceCard {
+                width: 55%;
+                height: fit-content;
+                min-height: 80vh;
+
+                border-radius: 12px;
+                background-color: $font-color-1;
+                color: $primary-color;
+                padding: 2rem 2.5rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                position: relative;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+
+                // Subtle paper texture
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url("../../../public/paper-texture.avif");
+                    opacity: 0.5;
+                    border-radius: 12px;
+                    pointer-events: none;
+                }
+
+                h1 {
+                    color: white;
+                }
+
+                h3 {
+                    text-align: center;
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                    color: darken($primary-color, 5%);
+                    border-bottom: 2px solid rgba($secondary-color, 0.3);
+                    padding-bottom: 1rem;
+                }
+
+                h5 {
+                    font-size: 1.2rem;
+                    color: $secondary-color;
+                    margin: 1.5rem 0 1rem;
+                    font-weight: 600;
+                    position: relative;
+                    padding-left: 1rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 4px;
+                        height: 100%;
+                        background-color: $secondary-color;
+                        border-radius: 2px;
+                    }
+                }
+
+                ul {
+                    margin: 0;
+                    padding-left: 1.5rem;
+
+                    li {
+                        position: relative;
+                        line-height: 1.6;
+                        margin-bottom: 0.8rem;
+                        padding-left: 1.5rem;
+                        font-size: 1rem;
+                        color: rgba($primary-color, 0.85);
+                        list-style: none;
+
+                        &::before {
+                            content: '•';
+                            position: absolute;
+                            left: 0;
+                            color: $secondary-color;
+                            font-weight: bold;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+
+                // Hover effect
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        .experienceTitle {
+            width: 40vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            h1 {
+                color: $font-color-1;
+                font-size: 4rem;
+                padding: 0;
+                margin: 0%;
+            }
+
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+}

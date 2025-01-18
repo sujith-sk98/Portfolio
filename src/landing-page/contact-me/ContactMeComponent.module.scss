@@ -1,0 +1,136 @@
+@import "../../styles/variables.scss";
+
+.contactContainer {
+    min-height: 100vh;
+    background-color: $primary-color;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: $secondary-color;
+        width: 30%;
+        top: 3rem;
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+}
+
+.contactContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.title {
+    color: $font-color-1;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.infoCard {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(255, 200, 107, 0.15);
+    cursor: pointer;
+
+    .icon {
+        color: $secondary-color;
+        width: 24px;
+        height: 24px;
+    }
+
+    span {
+        color: $secondary-color;
+        font-size: 1.2rem;
+    }
+}
+
+.socialLinks {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+
+    a {
+        color: $font-color-1;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+.thanksText {
+    color: $secondary-color;
+    font-size: 2.5rem;
+    text-align: center;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+// Media Queries
+@media (min-width: 768px) {
+    .contactInfo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .infoCard {
+            flex: 1;
+            min-width: 300px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .thanksText {
+        font-size: 2rem;
+    }
+
+    .infoCard {
+        padding: 1.2rem 1.5rem;
+        
+        span {
+            font-size: 1rem;
+        }
+    }
+}

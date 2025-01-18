@@ -1,0 +1,78 @@
+@import "../../styles/variables.scss";
+
+
+.aboutMeScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: $secondary-color;
+    overflow: hidden;
+    h2 {
+        font-size: 3rem;
+        margin: 0;
+        padding-top: 3rem;
+        text-align: center;
+        color: $font-color-1;
+    }
+
+    .aboutMeSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    .myDescription {
+        width: 50%;
+        padding: 1rem;
+        margin-right: 10%;
+
+        p {
+            color: $font-color-1;
+            font-size: clamp(1rem, 2vw, 2vw);
+        }
+    }
+
+    .myImage {
+        img {
+            width: clamp(100px, 20vw, 400px);
+            height: clamp(100px, 20vw, 400px);
+            border-radius: 50%;
+            border: clamp(2px, 5px, 10px) solid white;
+            cursor: pointer;
+        }
+    }
+}
+.buttons{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: clamp(2rem, 4vw, 4vw);
+
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: 3px solid $primary-color;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: scale 0.5s ease-in-out;
+        background-color: $primary-color;
+        color: $font-color-1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        &:hover {
+          background-color: lighten($primary-color, 10%);
+          scale: 1.1;
+        }
+        
+        &:active {
+          background-color: darken($primary-color, 5%);
+        }
+    }
+    
+}
+
+}

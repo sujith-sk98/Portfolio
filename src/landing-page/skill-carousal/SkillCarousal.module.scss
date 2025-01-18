@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.frontEndSkillsSection {
+    position: relative;
+    padding-top: 3rem;
+    h2{
+        position: absolute;
+        color: $secondary-color !important;
+        margin-top: -7rem !important;
+        font-size: clamp(2rem, 6rem, 6rem) !important;
+    }
+    .frontEndSkillsDiv {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        .frontEndSkillSCarousel {
+            display: flex;
+            padding-top: 3rem;
+            gap: 1rem;
+            padding: 1rem;
+        }
+    }
+}
