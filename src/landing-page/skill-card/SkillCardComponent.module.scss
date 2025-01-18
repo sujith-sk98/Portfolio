@@ -16,4 +16,17 @@
             font-size: x-large;
         }
     }
+
+    @media (max-width: 768px){
+        padding: 0.5rem;
+        .skillCardImage{
+            width: 50px;
+            height: 50px;
+        }
+        .SkillCardTitle{
+            span{
+                font-size: 0.8rem;
+            }
+        }
+    }
 }

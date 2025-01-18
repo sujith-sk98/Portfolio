@@ -9,8 +9,8 @@ const ExperienceComponent = ({ targetRef }) => {
         target: experience1Ref || { current: null },
         offset: ["0.3 end", "start start"]
     });
-    const rotate1 = useTransform(scrollYProgress1, [0, 1], [90, 0])
-    const scale1 = useTransform(scrollYProgress1, [0, 1], [0, 1])
+    const rotate1 = useTransform(scrollYProgress1, [0, 0.8], [90, 0])
+    const scale1 = useTransform(scrollYProgress1, [0, 0.8], [0, 1])
     const title1y = useTransform(scrollYProgress1, [0,1], [-250, 0])
 
 
@@ -19,17 +19,17 @@ const ExperienceComponent = ({ targetRef }) => {
         target: experience2Ref || { current: null },
         offset: ["0.3 end", "start start"]
     });
-    const rotate2 = useTransform(scrollYProgress2, [0, 1], [-90, 0])
-    const scale2 = useTransform(scrollYProgress2, [0, 1], [0, 1])
-    const title2y = useTransform(scrollYProgress2, [0,1], [-250, 0])
+    const rotate2 = useTransform(scrollYProgress2, [0, 0.8], [-90, 0])
+    const scale2 = useTransform(scrollYProgress2, [0, 0.8], [0, 1])
+    const title2y = useTransform(scrollYProgress2, [0,1], [-120, 0])
 
     const experience3Ref = useRef(null);
     const { scrollYProgress: scrollYProgress3 } = useScroll({
         target: experience3Ref || { current: null },
         offset: ["0.3 end", "start start"]
     });
-    const rotate3 = useTransform(scrollYProgress3, [0, 1], [90, 0])
-    const scale3 = useTransform(scrollYProgress3, [0, 1], [0, 1])
+    const rotate3 = useTransform(scrollYProgress3, [0, 0.8], [90, 0])
+    const scale3 = useTransform(scrollYProgress3, [0, 0.8], [0, 1])
     const title3y = useTransform(scrollYProgress3, [0, 1], [-120, 0])
 
     const titleRef = useRef(null);
@@ -37,7 +37,7 @@ const ExperienceComponent = ({ targetRef }) => {
         target: titleRef || { current: null },
         offset: ["0.3 end", "start center"]
     });
-    const y = useTransform(titleProgress, [0, 1], [0, -120]);
+    const y = useTransform(titleProgress, [0, 1], [0, -150]);
 
     return (
     <div ref={titleRef} className={style.myExperienceScreen} id='my-experience'>
@@ -65,7 +65,7 @@ const ExperienceComponent = ({ targetRef }) => {
 
                 </motion.div>
             </motion.div>
-            <div className={style.experienceTitle}>
+            <div className={`${style.experienceTitle} ${style.belowTitle}`}>
                 <motion.h1 style={{ y }}>Experion Technologies</motion.h1>
                 <motion.h2 style={{ scale: scale1, opacity: scale1 }}>2021 - 2022</motion.h2>
             </div>
@@ -123,7 +123,7 @@ const ExperienceComponent = ({ targetRef }) => {
 
                 </motion.div>
             </motion.div>
-            <div className={style.experienceTitle}>
+            <div className={`${style.experienceTitle} ${style.belowTitle}`}>
                 <motion.h1 style={{ y: title3y }}>Infosys Limited</motion.h1>
                 <motion.h2 style={{ scale: scale3, opacity: scale3 }}>2023 - Present</motion.h2>
             </div>

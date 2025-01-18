@@ -22,4 +22,17 @@
             padding: 1rem;
         }
     }
+
+    @media (max-width: 768px){
+        h2{
+            margin-top: -5rem !important;
+            font-size: clamp(1rem, 3rem, 4rem) !important;
+        }
+        .frontEndSkillsDiv {
+            .frontEndSkillSCarousel {
+                gap: 0.5rem;
+                padding: 0.5rem;
+            }
+        }
+    }
 }
