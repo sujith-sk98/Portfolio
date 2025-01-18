@@ -4,42 +4,42 @@ export const frontEndSkillCards = [
   {
     id: 1,
     title: "Angular",
-    url: "../images/Front-end/Angular.png",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/Angular.png`,
   },
   {
     id: 2,
     title: "React",
-    url: "../images/Front-end/reactjs.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/reactjs.jpg`,
   },
   {
     id: 3,
     title: "HTML",
-    url: "../images/Front-end/HTML.png",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/HTML.png`,
   },
   {
     id: 4,
     title: "CSS",
-    url: "../images/Front-end/CSS.png",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/CSS.png`,
   },
   {
     id: 5,
     title: "JavaScript",
-    url: "../images/Front-end/javascript.webp",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/javascript.webp`,
   },
   {
     id: 6,
     title: "TypeScript",
-    url: "../images/Front-end/TypeScript.png",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.png`,
   },
   {
     id: 7,
     title: "SpreadJs",
-    url: "../images/Front-end/spreadjs.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/spreadjs.jpg`,
   },
   {
     id: 8,
     title: "Sass",
-    url: "../images/Front-end/sass.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Front-end/sass.jpg`,
   },
 ];
 
@@ -47,22 +47,22 @@ export const backendSkillsCards = [
   {
     id: 1,
     title: "NodeJs",
-    url: "/images/Back-end/nodejs.png",
+    url: `${process.env.PUBLIC_URL}/images/Back-end/nodejs.png`,
   },
   {
     id: 2,
     title: "Express",
-    url: "/images/Back-end/express.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Back-end/express.jpg`,
   },
   {
     id: 3,
     title: "PostgreSQL",
-    url: "../images/Back-end/postgresql.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Back-end/postgresql.jpg`,
   },
   {
     id: 4,
     title: "Cassandra",
-    url: "../images/Back-end/Cassandra.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Back-end/Cassandra.jpg`,
   },
 ];
 
@@ -70,27 +70,27 @@ export const otherSkills = [
   {
     id: 1,
     title: "Git",
-    url: "/images/Others/Git.png",
+    url: `${process.env.PUBLIC_URL}/images/Others/Git.png`,
   },
   {
     id: 2,
     title: "Jira",
-    url: "/images/Others/jira.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Others/jira.jpg`,
   },
   {
     id: 3,
     title: "AzureDevOps",
-    url: "/images/Others/AzureDevOps.png",
+    url: `${process.env.PUBLIC_URL}/images/Others/AzureDevOps.png`,
   },
   {
     id: 4,
     title: "RabbitMQ",
-    url: "/images/Others/RabbitMq.jpg",
+    url: `${process.env.PUBLIC_URL}/images/Others/RabbitMq.jpg`,
   },
   {
     id: 5,
     title: "Ubuntu",
-    url: "/images/Others/Ubuntu.png",
+    url: `${process.env.PUBLIC_URL}/images/Others/Ubuntu.png`,
   },
 ];
 

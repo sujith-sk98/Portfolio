@@ -43,7 +43,7 @@ const AboutMeComponent = () => {
                 <motion.div
                     className={style.myImage}
                 >
-                    <motion.img src="/images/my-image.jpeg" alt="My Image"
+                    <motion.img src={`${process.env.PUBLIC_URL}/images/my-image.jpeg`} alt="My Image"
 
                         style={{ scale, opacity: scale }}    
                         transition={{
