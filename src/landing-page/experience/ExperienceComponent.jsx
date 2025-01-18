@@ -11,7 +11,7 @@ const ExperienceComponent = ({ targetRef }) => {
     });
     const rotate1 = useTransform(scrollYProgress1, [0, 0.8], [90, 0])
     const scale1 = useTransform(scrollYProgress1, [0, 0.8], [0, 1])
-    const title1y = useTransform(scrollYProgress1, [0,1], [-250, 0])
+    const title1y = useTransform(scrollYProgress1, [0,0.8], [-250, 0])
 
 
     const experience2Ref = useRef(null);
@@ -21,7 +21,7 @@ const ExperienceComponent = ({ targetRef }) => {
     });
     const rotate2 = useTransform(scrollYProgress2, [0, 0.8], [-90, 0])
     const scale2 = useTransform(scrollYProgress2, [0, 0.8], [0, 1])
-    const title2y = useTransform(scrollYProgress2, [0,1], [-120, 0])
+    const title2y = useTransform(scrollYProgress2, [0,0.8], [-120, 0])
 
     const experience3Ref = useRef(null);
     const { scrollYProgress: scrollYProgress3 } = useScroll({
@@ -30,7 +30,7 @@ const ExperienceComponent = ({ targetRef }) => {
     });
     const rotate3 = useTransform(scrollYProgress3, [0, 0.8], [90, 0])
     const scale3 = useTransform(scrollYProgress3, [0, 0.8], [0, 1])
-    const title3y = useTransform(scrollYProgress3, [0, 1], [-120, 0])
+    const title3y = useTransform(scrollYProgress3, [0, 0.8], [-120, 0])
 
     const titleRef = useRef(null);
     const { scrollYProgress: titleProgress } = useScroll({
@@ -66,7 +66,7 @@ const ExperienceComponent = ({ targetRef }) => {
                 </motion.div>
             </motion.div>
             <div className={`${style.experienceTitle} ${style.belowTitle}`}>
-                <motion.h1 style={{ y }}>Experion Technologies</motion.h1>
+                <motion.h1 style={{ y: title1y }}>Experion Technologies</motion.h1>
                 <motion.h2 style={{ scale: scale1, opacity: scale1 }}>2021 - 2022</motion.h2>
             </div>
         </div>
