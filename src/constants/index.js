@@ -223,3 +223,32 @@ export const wobbleVariants = {
     },
   },
 };
+
+export const getTextRevealVariantUp = () => {
+  return {
+    animate: {
+      y: [-150, 0],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "reverse",
+        repeatDelay: 1,
+        ease: "easeInOut",
+      },
+    },
+  }
+}
+
+export const getTextRevealVariantDown = () => {
+  return {
+    animate: {
+      y: [-150, 0],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+  }
+}

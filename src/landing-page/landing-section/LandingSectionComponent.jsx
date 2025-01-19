@@ -1,57 +1,63 @@
+import { getTextRevealVariantDown, getTextRevealVariantUp } from '../../constants';
 import style from './LandingSectionComponent.module.scss'
 import { motion } from 'motion/react';
 const LandingSectionComponent = () => {
+    
     return (
         <div className={style.landingScreen}>
+            <nav className={style.nav}>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 1 }}
+                    className={style.navItem}
+                >
+                    <a href="#about-me"><span>About Me</span></a>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7, duration: 1 }}
+                    className={style.navItem}
+                >
+                    <a href="#skills"><span>Skills</span></a>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.9, duration: 1 }}
+                    className={style.navItem}
+                >
+                    <a href="#experience"><span>Experience</span></a>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.1, duration: 1 }}
+                    className={style.navItem}
+                >
+                    <a href="#contact-me"><span>Contact Me</span></a>
+                </motion.div>
+            </nav>
+            <div className={style.landingContent}>
+                <div className={style.firstLine}>
+                    <motion.h1 animate="animate" variants={getTextRevealVariantUp()}>
+                        Hi I am
+                    </motion.h1>
+                    <motion.h1 animate="animate" variants={getTextRevealVariantUp()}>
+                        Welcome
+                    </motion.h1>
+                </div>
+                <div className={style.secondLine}>
+                    <motion.h1 animate="animate" variants={getTextRevealVariantUp()}>
+                        Sujith S Kumar
+                    </motion.h1>
+                    <motion.h1 animate="animate" variants={getTextRevealVariantUp()}>
+                        To my page
+                    </motion.h1>
+                </div>
 
-            <motion.div className={`${style.section} ${style.section1}`}
-                initial={{ x: 600 }}
-
-                whileInView={{
-                    x: 0,
-                    y: 0,
-                    skew: (0, -5),
-                    scale: 1.1
-                }}
-
-                transition={{
-                    duration: 1.5,
-                    delay: 0.2,
-                    ease: "easeOut",
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 10
-                }}
-            >
-                <h2><a href="#about-me">About Me</a></h2>
-            </motion.div>
-            <motion.div className={`${style.section} ${style.section2}`}>
-                <h2><a href="#my-skills">My Skills</a></h2>
-            </motion.div>
-            <motion.div className={`${style.section} ${style.section3}`}>
-                <h2><a href="#my-experience">My Experience</a></h2>
-            </motion.div>
-            <motion.div className={`${style.section} ${style.section4}`}
-                initial={{ x: -1000 }}
-
-                whileInView={{
-                    x: 0,
-                    y: 0,
-                    skew: (0, -5),
-                    scale: 1.1
-                }}
-
-                transition={{
-                    duration: 1.5,
-                    delay: 0.2,
-                    ease: "easeOut",
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 10
-                }}
-            >
-                <h2><a href="#contact-me">Contact Me</a></h2>
-            </motion.div>
+            </div>
         </div>
     )
 }
