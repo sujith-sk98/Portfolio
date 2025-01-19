@@ -252,3 +252,23 @@ export const getTextRevealVariantDown = () => {
     },
   }
 }
+
+export const navItems = [
+  { title: "About Me", href: "#about-me", delay: 0.5 },
+  { title: "Skills", href: "#skills", delay: 0.7 },
+  { title: "Experience", href: "#experience", delay: 0.9 },
+  { title: "Contact Me", href: "#contact-me", delay: 1.1 }
+];
+
+export const textVariants = {
+  hidden: { y: 200, opacity: 0 },
+  visible: (delay) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+          duration: 0.8,
+          delay,
+          ease: "easeOut"
+      }
+  })
+};

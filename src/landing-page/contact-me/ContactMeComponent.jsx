@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, MessageCircle } from 'lucide-react';
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import style from './ContactMeComponent.module.scss'
-import { floatingVariants, getRandomfloatingVariant } from '../../constants';
 
 const ContactMeComponent = () => {
     const targetRef = useRef(null);
@@ -64,9 +63,7 @@ const ContactMeComponent = () => {
                     <motion.a 
                         href="#" 
                         whileHover={{ scale: 1.1 }}
-                        // transition={{ type: "spring", stiffness: 400 }}
                         style={{x: minusX}}
-                        // animate='animate' variants={getRandomfloatingVariant()}
                     >
                         <Instagram />
                     </motion.a>
@@ -75,7 +72,6 @@ const ContactMeComponent = () => {
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x: minusX}}
-                        // animate='animate' variants={getRandomfloatingVariant()}
                     >
                         <Twitter />
                     </motion.a>
@@ -84,7 +80,6 @@ const ContactMeComponent = () => {
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x}}
-                        // animate='animate' variants={getRandomfloatingVariant()}
                     >
                         <Linkedin />
                     </motion.a>
@@ -93,7 +88,6 @@ const ContactMeComponent = () => {
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x}}
-                        // animate='animate' variants={getRandomfloatingVariant()}
                     >
                         <MessageCircle />
                     </motion.a>

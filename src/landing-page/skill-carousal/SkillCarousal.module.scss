@@ -3,18 +3,18 @@
 .frontEndSkillsSection {
     position: relative;
     padding-top: 3rem;
-    h2{
+
+    h2 {
         position: absolute;
         color: $secondary-color !important;
         margin-top: -7rem !important;
         font-size: clamp(2rem, 6rem, 6rem) !important;
     }
+
     .frontEndSkillsDiv {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
         align-items: center;
         display: flex;
+
         .frontEndSkillSCarousel {
             display: flex;
             padding-top: 3rem;
@@ -23,13 +23,18 @@
         }
     }
 
-    @media (max-width: 768px){
-        h2{
+    @media (max-width: 768px) {
+        h2 {
             margin-top: -5rem !important;
             font-size: clamp(1rem, 3rem, 4rem) !important;
         }
+
         .frontEndSkillsDiv {
+            padding: 1rem;
+
             .frontEndSkillSCarousel {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
                 gap: 0.5rem;
                 padding: 0.5rem;
             }

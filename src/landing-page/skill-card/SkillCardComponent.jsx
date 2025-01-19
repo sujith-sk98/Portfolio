@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './SkillCardComponent.module.scss';
 import { motion } from 'motion/react';
-import { floatingVariants, jiggleVariants, oscillateVariants, wobbleVariants } from '../../constants';
 
 const SkillCardComponent = ({ card }) => {
     return (

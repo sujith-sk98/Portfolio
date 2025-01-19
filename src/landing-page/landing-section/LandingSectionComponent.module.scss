@@ -1,63 +1,112 @@
 @import '../../styles/variables';
 
-
-
 .landingScreen {
     background-color: $primary-color;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
-    nav{
+    position: relative;
+    overflow: hidden;
+
+    // Modern gradient background
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    nav {
         display: flex;
-        justify-content: space-between;
-        padding: 0.5rem 0.5rem;
-        background-color: $secondary-color;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        .navItem{
-            display: flex;
-            align-items: center;
-            padding: 0 1rem;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 500;
-            a{
-                text-decoration: none;
-                color: inherit;
+        justify-content: flex-end;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(8px);
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        
+        @media (max-width: 768px) {
+            padding: 1rem;
+            justify-content: space-around;
+        }
+
+        .navItem {
+            margin: 0 2rem;
+            position: relative;
+            
+            @media (max-width: 768px) {
+                margin: 0 0.5rem;
             }
-            @media (max-width: 768px){
-                font-size: 1rem;
+
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                font-size: 1.1rem;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                padding: 0.5rem 0;
+                transition: all 0.3s ease;
+
+                @media (max-width: 768px) {
+                    font-size: 0.9rem;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $font-color-1;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: lighten($font-color-1, 20%);
+                    
+                    &::after {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
-    .landingContent{
+
+    .landingContent {
+        flex: 1;
         display: flex;
-        justify-content: center;
-        align-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
-        font-size: 3rem;
-        color: $font-color-1;
-        h1{
-            margin: 0;
-        }
-        .firstLine{
-            height: 15vh;
-            overflow: hidden;
-            text-align: center;
-        }
-        .secondLine{
-            height: 20vh;
-            overflow: hidden;
-            text-align: center;
-        }
-        @media (max-width: 768px){
-            .firstLine{
-                height: 15vh;
+        justify-content: center;
+        padding: 0 2rem;
+        margin-top: 4rem;
+        .firstLine, .secondLine{
+            font-size: 3rem;
+            span{
+                display: inline-block;
+                margin-right: 3rem;
             }
-            .secondLine{
-                height: 15vh;
+
+            h1{
+                margin: 0;
+                color: $font-color-1;
             }
         }
+        @media (max-width: 768px) {
+            padding: 0 1rem;
+            margin-top: 1rem;
+            gap: 3rem;
+            .firstLine, .secondLine{
+                font-size: 2rem;
+                span{
+                    margin-right: 1rem;
+                }
+            }
+        }
+
     }
 }

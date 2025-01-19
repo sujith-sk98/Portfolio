@@ -2,7 +2,7 @@ import { delay, motion, useMotionValueEvent, useScroll, useTransform } from "mot
 import style from "./ExperienceComponent.module.scss"
 import { useRef } from "react";
 import { floatingVariants, jiggleVariants, projects1, projects2, projects3 } from "../../constants";
-const ExperienceComponent = ({ targetRef }) => {
+const ExperienceComponent = () => {
 
     const experience1Ref = useRef(null);
     const { scrollYProgress: scrollYProgress1 } = useScroll({
