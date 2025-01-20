@@ -32,7 +32,8 @@ const SkillCardComponent = ({ card }) => {
                         }
                     }
                 }}
-            ></motion.div>
+            >
+            </motion.div>
             <div className={styles.SkillCardTitle}>
                 <span>{card.title}</span>
             </div>

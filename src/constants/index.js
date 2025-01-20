@@ -9,7 +9,7 @@ export const frontEndSkillCards = [
   {
     id: 2,
     title: "React",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/reactjs.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Front-end/React.png`,
   },
   {
     id: 3,
@@ -24,12 +24,12 @@ export const frontEndSkillCards = [
   {
     id: 5,
     title: "JavaScript",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/javascript.webp`,
+    url: `${process.env.PUBLIC_URL}/images/Front-end/javascript.png`,
   },
   {
     id: 6,
     title: "TypeScript",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.webp`,
+    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.png`,
   },
   {
     id: 7,
@@ -39,7 +39,7 @@ export const frontEndSkillCards = [
   {
     id: 8,
     title: "Sass",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/sass.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Front-end/sass.png`,
   },
 ];
 
@@ -52,17 +52,17 @@ export const backendSkillsCards = [
   {
     id: 2,
     title: "Express",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/express.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Back-end/express.png`,
   },
   {
     id: 3,
     title: "PostgreSQL",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/postgresql.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Back-end/postgresql.png`,
   },
   {
     id: 4,
     title: "Cassandra",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/Cassandra.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Back-end/cassandra.png`,
   },
 ];
 
@@ -75,17 +75,17 @@ export const otherSkills = [
   {
     id: 2,
     title: "Jira",
-    url: `${process.env.PUBLIC_URL}/images/Others/jira.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Others/jira.png`,
   },
   {
     id: 3,
     title: "AzureDevOps",
-    url: `${process.env.PUBLIC_URL}/images/Others/AzureDevOps.png`,
+    url: `${process.env.PUBLIC_URL}/images/Others/azure.png`,
   },
   {
     id: 4,
     title: "RabbitMQ",
-    url: `${process.env.PUBLIC_URL}/images/Others/RabbitMq.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Others/rabbitmq.png`,
   },
   {
     id: 5,
@@ -95,7 +95,7 @@ export const otherSkills = [
   {
     id: 5,
     title: "Confluence",
-    url: `${process.env.PUBLIC_URL}/images/Others/confluence.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Others/confluence.png`,
   },
   {
     id: 5,
@@ -105,7 +105,7 @@ export const otherSkills = [
   {
     id: 5,
     title: "Postman",
-    url: `${process.env.PUBLIC_URL}/images/Others/postman.jpg`,
+    url: `${process.env.PUBLIC_URL}/images/Others/postman.png`,
   },
 ];
 
