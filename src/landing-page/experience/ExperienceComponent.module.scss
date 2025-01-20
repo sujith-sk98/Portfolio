@@ -212,13 +212,14 @@
             overflow: hidden;
 
             h1 {
-                color: $font-color-1;
+                color: lighten($primary-color, 5%);
                 font-size: 4rem;
                 padding: 0;
                 margin: 0%;
             }
 
             h2 {
+                color: $primary-color;
                 padding: 0;
             }
 

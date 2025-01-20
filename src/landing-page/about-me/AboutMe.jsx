@@ -15,7 +15,7 @@ const AboutMeComponent = () => {
         offset: ["0.5 end", "center center"]
     });
 
-    const yTitle = useTransform(scrollYProgress, [0, 1], [-350, 0]);
+    const yTitle = useTransform(scrollYProgress, [0, 1], ["-50vh", "0vh"]);
     const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const x = useTransform(forDescription, [0, 1], [500, 0]);
     const button1x = useTransform(forDescription, [0, 1], [200, 0]);

@@ -1,4 +1,4 @@
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import style from './LandingSectionComponent.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { navItems, textVariants } from '../../constants';
@@ -25,10 +25,9 @@ const LandingSectionComponent = () => {
             offset: ["end end", "end start"]
         } : { offset: ["end end", "end start"] }
     );
-    const y = useTransform(scrollYProgress, [0, 1], [0, 400]);
+    const y = useTransform(scrollYProgress, [0, 1], ['0vh', '50vh']);
     const minusY = useTransform(scrollYProgress, [0, 1], [0, -400]);
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    useMotionValueEvent((scrollYProgress), 'change', (latest) => { console.log("y", latest, y) })
 
     return (
         <div className={style.landingScreen} ref={targetRef}>

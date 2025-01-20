@@ -29,7 +29,7 @@ export const frontEndSkillCards = [
   {
     id: 6,
     title: "TypeScript",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.png`,
+    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.webp`,
   },
   {
     id: 7,
@@ -91,6 +91,21 @@ export const otherSkills = [
     id: 5,
     title: "Ubuntu",
     url: `${process.env.PUBLIC_URL}/images/Others/Ubuntu.png`,
+  },
+  {
+    id: 5,
+    title: "Confluence",
+    url: `${process.env.PUBLIC_URL}/images/Others/confluence.jpg`,
+  },
+  {
+    id: 5,
+    title: "Agile",
+    url: `${process.env.PUBLIC_URL}/images/Others/agile.png`,
+  },
+  {
+    id: 5,
+    title: "Postman",
+    url: `${process.env.PUBLIC_URL}/images/Others/postman.jpg`,
   },
 ];
 
@@ -255,8 +270,8 @@ export const getTextRevealVariantDown = () => {
 
 export const navItems = [
   { title: "About Me", href: "#about-me", delay: 0.5 },
-  { title: "Skills", href: "#skills", delay: 0.7 },
-  { title: "Experience", href: "#experience", delay: 0.9 },
+  { title: "Skills", href: "#my-skills", delay: 0.7 },
+  { title: "Experience", href: "#my-experience", delay: 0.9 },
   { title: "Contact Me", href: "#contact-me", delay: 1.1 }
 ];
 

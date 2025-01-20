@@ -3,3 +3,47 @@
 html {
     scroll-behavior: smooth;
 }
+.scrollIndicator {
+    position: fixed;
+    bottom: 20px; /* Adjust distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure it's above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid $font-color-1; /* Adjust color */
+    border-bottom: 4px solid $font-color-1; /* Adjust color */
+    transform: rotate(-45deg); /* Create an arrow shape */
+    animation: pulsate 1.5s infinite ease-in-out, moveDown 1.5s infinite ease-in-out;
+  }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @keyframes pulsate {
+    0%, 100% {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: rotate(-45deg) scale(1.2);
+    }
+  }
+  
+  @keyframes moveDown {
+    0%, 100% {
+      transform: rotate(-45deg) translateY(0);
+    }
+    50% {
+      transform: rotate(-45deg) translateY(5px);
+    }
+  }

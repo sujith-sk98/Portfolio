@@ -61,34 +61,37 @@ const ContactMeComponent = () => {
 
                 <div className={style.socialLinks}>
                     <motion.a 
-                        href="#" 
+                        href="https://www.instagram.com/es_kay_98/" 
                         whileHover={{ scale: 1.1 }}
                         style={{x: minusX}}
+                        target='_blank'
                     >
                         <Instagram />
                     </motion.a>
                     <motion.a 
-                        href="#" 
+                        href="https://x.com/@sujith916007" 
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x: minusX}}
+                        target='_blank'
                     >
                         <Twitter />
                     </motion.a>
                     <motion.a 
-                        href="#" 
+                        href="https://www.linkedin.com/in/sujith-sk" 
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x}}
+                        target='_blank'
                     >
                         <Linkedin />
                     </motion.a>
                     <motion.a 
-                        href="#" 
+                        href="https://wa.me/7907003467" 
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 400 }}
                         style={{x}}
-                    >
+                        target='_blank'>
                         <MessageCircle />
                     </motion.a>
                 </div>
