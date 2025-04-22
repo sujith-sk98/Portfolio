@@ -45,7 +45,7 @@ const AboutMeComponent = () => {
                     >
                         <img 
                             src={`${process.env.PUBLIC_URL}/images/my-image.jpeg`} 
-                            alt="My Image"
+                            alt="Sujith S Kumar"
                         />
                     </motion.div>
 

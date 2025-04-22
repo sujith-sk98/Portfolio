@@ -1,7 +1,7 @@
-import { delay, motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import style from "./ExperienceComponent.module.scss"
 import { useRef } from "react";
-import { floatingVariants, jiggleVariants, projects1, projects2, projects3 } from "../../constants";
+import { floatingVariants, projects1, projects2, projects3 } from "../../constants";
 const ExperienceComponent = () => {
 
     const experience1Ref = useRef(null);

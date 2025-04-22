@@ -1,5 +1,3 @@
-import { delay } from "motion";
-
 export const frontEndSkillCards = [
   {
     id: 1,
