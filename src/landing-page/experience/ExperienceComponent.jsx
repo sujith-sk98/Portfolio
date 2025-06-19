@@ -74,7 +74,7 @@ const ExperienceComponent = () => {
         <div className={style.experienceDiv} ref={experience2Ref}>
             <div className={style.experienceTitle}>
                 <motion.h1 style={{ y: title2y }}>Experion Technologies</motion.h1>
-                <motion.h2 style={{ scale: scale2, opacity: scale2 }}>2022 - 2023</motion.h2>
+                <motion.h2 style={{ scale: scale2, opacity: scale2 }}>2022 - 2024</motion.h2>
             </div>
             <motion.div className={style.experienceCardDiv} animate='animate' variants={floatingVariants} >
                 <motion.div className={style.experienceCard} style={{ rotate: rotate2, scale: scale2 }}>
@@ -125,7 +125,7 @@ const ExperienceComponent = () => {
             </motion.div>
             <div className={`${style.experienceTitle} ${style.belowTitle}`}>
                 <motion.h1 style={{ y: title3y }}>Infosys Limited</motion.h1>
-                <motion.h2 style={{ scale: scale3, opacity: scale3 }}>2023 - Present</motion.h2>
+                <motion.h2 style={{ scale: scale3, opacity: scale3 }}>2024 - Present</motion.h2>
             </div>
         </div>
     </div>

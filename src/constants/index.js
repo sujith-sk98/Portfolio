@@ -156,13 +156,13 @@ export const projects2 = [
 export const projects3 = [
   {
     id: 5,
-    project: "Top Bank in US",
+    project: " NACHA – Bank Payment Clearing System",
     responsibilities: [
-      "Developed secure banking features using React and TypeScript.",
-      "Integrated third-party payment gateways and ensured compliance with industry standards.",
-      "Optimized the performance of critical financial dashboards.",
-      "Collaborated with cross-functional teams to design and implement user-friendly interfaces.",
-      "Ensured application scalability by implementing microservices architecture.",
+      "Participated in a modernization project migrating the payment system from mainframe to a modern React-based web application",
+      "Contributed to the complete rewrite of the application with a focus on performance and usability",
+      "Developed reusable React components to streamline development and maintain design consistency",
+      "Worked collaboratively with Business Analysts for wireframe interpretation and functional suggestions",
+      "Delivered on a tight project timeline where timely quality delivery was critical",
     ],
   },
 ];
