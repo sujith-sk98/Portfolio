@@ -22,57 +22,89 @@
 
     nav {
         display: flex;
-        justify-content: flex-end;
-        padding: 1rem 2rem;
-        backdrop-filter: blur(8px);
-        width: 100%;
+        justify-content: flex-end; /* Aligned to the right */
+        padding: 1rem 2.5rem; /* Increased right padding for more space */
+        /* Removed backdrop-filter for blur effect */
+        background-color: transparent; /* Totally transparent initially */
+        /* Removed initial border and shadow */
+        width: 95%;
         z-index: 100;
+        position: fixed; /* Make it sticky */
+        top: 0;
+        left: 0;
+        transition: background-color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+        
+        &.scrolledNav {
+            /* No background, border, or shadow on the nav itself */
+
+            .navItem {
+                background-color: rgba(255, 255, 255, 0.3); /* Glass effect for capsules */
+                border-radius: 25px; /* Oval shape */
+                padding: 0.5rem 1rem; /* Adjust padding for capsule size */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle lift */
+                transition: all 0.3s ease; /* Smooth transition for capsule appearance */
+                backdrop-filter: blur(3px); /* Added more blur for glass effect */
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.5); /* Slightly more opaque on hover */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced lift on hover */
+                    transform: translateY(-2px); /* Slight upward movement */
+                }
+
+                a {
+                    color: $dark-font-color; /* Dark font color when scrolled */
+
+                    &:hover {
+                        color: $font-color-1; /* Font color to white on hover */
+                    }
+
+                    &::after {
+                        background-color: $dark-font-color;
+                    }
+                }
+            }
+        }
         
         @media (max-width: 768px) {
-            padding: 1rem;
-            justify-content: space-around;
+            padding: 0.5rem 0.5rem; /* Reduced padding for mobile */
+            justify-content: space-between; /* Distribute items evenly */
         }
 
         .navItem {
-            margin: 0 2rem;
+            margin: 0 0.5rem; /* Reduced margin between items */
             position: relative;
+            transition: all 0.3s ease; /* Smooth transition for capsule appearance */
+            
+            &:last-child {
+                margin-right: 0.5rem; /* Adjusted for mobile */
+            }
             
             @media (max-width: 768px) {
-                margin: 0 0.5rem;
+                margin: 0 0.2rem; /* Further reduced margin for mobile */
+
+                &.scrolledNav {
+                    padding: 0.3rem 0.6rem; /* Smaller padding for mobile capsules */
+                }
             }
 
             a {
                 text-decoration: none;
                 color: $secondary-color;
-                font-size: 1.1rem;
+                font-size: 1rem; /* Slightly smaller font size */
                 font-weight: 500;
                 letter-spacing: 0.5px;
-                padding: 0.5rem 0.5rem;
+                padding: 0.75rem 1rem; /* Increased padding for better click area */
                 transition: all 0.3s ease;
-                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-
 
                 @media (max-width: 768px) {
-                    font-size: 0.9rem;
+                    font-size: 0.65rem; /* Even smaller font size for mobile */
+                    padding: 0.4rem 0.3rem; /* Adjusted padding for vertical centering */
                 }
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -2px;
-                    left: 8px;
-                    width: 0;
-                    height: 2px;
-                    background-color: $font-color-1;
-                    transition: width 0.3s ease;
-                }
+                /* Underline removed */
 
                 &:hover {
-                    color: lighten($font-color-1, 20%);
-                    
-                    &::after {
-                        width: 90%;
-                    }
+                    /* No specific hover effect for initial state */
                 }
             }
         }

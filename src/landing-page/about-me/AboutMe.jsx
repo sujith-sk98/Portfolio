@@ -62,7 +62,7 @@ const AboutMeComponent = () => {
                                 delay: 0.8
                             }}
                         >
-                            "I am a software developer skilled in front-end technologies like Angular and React, with hands-on experience in back-end development using Node.js. I seek opportunities to contribute to a dynamic team and drive impactful projects."
+                            "I am a dedicated software developer with 3.5 years of experience, specializing in front-end technologies like React and Angular. I also possess hands-on experience in back-end development with Node.js. My passion lies in crafting intuitive and high-performance applications, and I am always eager to leverage my skills to contribute to dynamic teams and drive impactful projects forward."
                         </motion.p>
                         
                         <div className={style.buttons}>

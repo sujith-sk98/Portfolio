@@ -5,6 +5,7 @@ import { navItems, textVariants } from '../../constants';
 
 const LandingSectionComponent = () => {
     const [shouldTrackScroll, setShouldTrackScroll] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // Update measurements on mount and resize
     useEffect(() => {
@@ -13,8 +14,19 @@ const LandingSectionComponent = () => {
             setShouldTrackScroll(true);
         }, 1000);
 
+        const handleScroll = () => {
+            if (window.scrollY > 50) { 
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
         return () => {
             clearTimeout(timer);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -31,19 +43,16 @@ const LandingSectionComponent = () => {
 
     return (
         <div className={style.landingScreen} ref={targetRef}>
-            <nav>
+            <nav className={isScrolled ? style.scrolledNav : ''}>
                 {navItems.map((item, index) => (
-                    <motion.div
+                    <div
                         key={item.title}
                         className={style.navItem}
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: item.delay, duration: 0.5 }}
                     >
                         <a href={item.href}>
                             <span>{item.title}</span>
                         </a>
-                    </motion.div>
+                    </div>
                 ))}
             </nav>
 
