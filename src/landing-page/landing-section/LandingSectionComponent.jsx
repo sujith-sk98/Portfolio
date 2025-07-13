@@ -67,7 +67,7 @@ const LandingSectionComponent = () => {
                         style={{ y: minusY, opacity }}
 
                     >
-                        {"Hi I am Sujith S Kumar".split(" ").map((char, index) => (
+                        {"Hi I am Sujith S Kumar Edited".split(" ").map((char, index) => (
                             <motion.span
                                 key={char + "-" + index}
                                 custom={index / 10}
