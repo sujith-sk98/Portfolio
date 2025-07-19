@@ -2,42 +2,42 @@ export const frontEndSkillCards = [
   {
     id: 1,
     title: "Angular",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/Angular.png`,
+    url: `/images/Front-end/Angular.png`,
   },
   {
     id: 2,
     title: "React",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/React.png`,
+    url: `/images/Front-end/React.png`,
   },
   {
     id: 3,
     title: "HTML",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/HTML.png`,
+    url: `/images/Front-end/HTML.png`,
   },
   {
     id: 4,
     title: "CSS",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/CSS.png`,
+    url: `/images/Front-end/CSS.png`,
   },
   {
     id: 5,
     title: "JavaScript",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/javascript.png`,
+    url: `/images/Front-end/javascript.png`,
   },
   {
     id: 6,
     title: "TypeScript",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/TypeScript.png`,
+    url: `/images/Front-end/TypeScript.png`,
   },
   {
     id: 7,
     title: "SpreadJs",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/spreadjs.jpg`,
+    url: `/images/Front-end/spreadjs.jpg`,
   },
   {
     id: 8,
     title: "Sass",
-    url: `${process.env.PUBLIC_URL}/images/Front-end/sass.png`,
+    url: `/images/Front-end/sass.png`,
   },
 ];
 
@@ -45,22 +45,22 @@ export const backendSkillsCards = [
   {
     id: 1,
     title: "NodeJs",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/nodejs.png`,
+    url: `/images/Back-end/nodejs.png`,
   },
   {
     id: 2,
     title: "Express",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/express.png`,
+    url: `/images/Back-end/express.png`,
   },
   {
     id: 3,
     title: "PostgreSQL",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/postgresql.png`,
+    url: `/images/Back-end/postgresql.png`,
   },
   {
     id: 4,
     title: "Cassandra",
-    url: `${process.env.PUBLIC_URL}/images/Back-end/cassandra.png`,
+    url: `/images/Back-end/cassandra.png`,
   },
 ];
 
@@ -68,42 +68,42 @@ export const otherSkills = [
   {
     id: 1,
     title: "Git",
-    url: `${process.env.PUBLIC_URL}/images/Others/Git.png`,
+    url: `/images/Others/Git.png`,
   },
   {
     id: 2,
     title: "Jira",
-    url: `${process.env.PUBLIC_URL}/images/Others/jira.png`,
+    url: `/images/Others/jira.png`,
   },
   {
     id: 3,
     title: "AzureDevOps",
-    url: `${process.env.PUBLIC_URL}/images/Others/azure.png`,
+    url: `/images/Others/azure.png`,
   },
   {
     id: 4,
     title: "RabbitMQ",
-    url: `${process.env.PUBLIC_URL}/images/Others/rabbitmq.png`,
+    url: `/images/Others/rabbitmq.png`,
   },
   {
     id: 5,
     title: "Ubuntu",
-    url: `${process.env.PUBLIC_URL}/images/Others/Ubuntu.png`,
+    url: `/images/Others/Ubuntu.png`,
   },
   {
     id: 5,
     title: "Confluence",
-    url: `${process.env.PUBLIC_URL}/images/Others/confluence.png`,
+    url: `/images/Others/confluence.png`,
   },
   {
     id: 5,
     title: "Agile",
-    url: `${process.env.PUBLIC_URL}/images/Others/agile.png`,
+    url: `/images/Others/agile.png`,
   },
   {
     id: 5,
     title: "Postman",
-    url: `${process.env.PUBLIC_URL}/images/Others/postman.png`,
+    url: `/images/Others/postman.png`,
   },
 ];
 

@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-
+@use '../../styles/variables' as *;
+@use "sass:color";
 .myExperienceScreen {
     width: 100%;
     background-color: $secondary-color;
@@ -63,7 +63,7 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background-image: url("../../../public/paper-texture.avif");
+                    background-image: url("/paper-texture.avif");
                     opacity: 0.5;
                     border-radius: 12px;
                     pointer-events: none;
@@ -77,7 +77,7 @@
                     text-align: center;
                     font-size: 1.8rem;
                     margin-bottom: 2rem;
-                    color: darken($primary-color, 5%);
+                    color: color.adjust($primary-color, $lightness: -5%);
                     border-bottom: 2px solid rgba($secondary-color, 0.3);
                     padding-bottom: 1rem;
                 }
@@ -212,7 +212,7 @@
             overflow: hidden;
 
             h1 {
-                color: lighten($primary-color, 5%);
+                color: color.adjust($primary-color, $lightness: 5%);
                 font-size: 4rem;
                 padding: 0;
                 margin: 0%;

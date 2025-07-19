@@ -49,7 +49,7 @@ const ExperienceComponent = () => {
                     {
                         projects1.map((project) => {
                             return (
-                                <motion.ul id={project.id}>
+                                <motion.ul id={project.id} key={project.id}>
                                     <motion.h5>{project.project}</motion.h5>
                                     {
                                         project.responsibilities.map((item) => {
