@@ -1,42 +1,42 @@
 export const frontEndSkillCards = [
   {
     id: 1,
-    title: "Angular",
+    title: 'Angular',
     url: `/images/Front-end/Angular.png`,
   },
   {
     id: 2,
-    title: "React",
+    title: 'React',
     url: `/images/Front-end/React.png`,
   },
   {
     id: 3,
-    title: "HTML",
+    title: 'HTML',
     url: `/images/Front-end/HTML.png`,
   },
   {
     id: 4,
-    title: "CSS",
+    title: 'CSS',
     url: `/images/Front-end/CSS.png`,
   },
   {
     id: 5,
-    title: "JavaScript",
+    title: 'JavaScript',
     url: `/images/Front-end/javascript.png`,
   },
   {
     id: 6,
-    title: "TypeScript",
+    title: 'TypeScript',
     url: `/images/Front-end/TypeScript.png`,
   },
   {
     id: 7,
-    title: "SpreadJs",
+    title: 'SpreadJs',
     url: `/images/Front-end/spreadjs.jpg`,
   },
   {
     id: 8,
-    title: "Sass",
+    title: 'Sass',
     url: `/images/Front-end/sass.png`,
   },
 ];
@@ -44,22 +44,22 @@ export const frontEndSkillCards = [
 export const backendSkillsCards = [
   {
     id: 1,
-    title: "NodeJs",
+    title: 'NodeJs',
     url: `/images/Back-end/nodejs.png`,
   },
   {
     id: 2,
-    title: "Express",
+    title: 'Express',
     url: `/images/Back-end/express.png`,
   },
   {
     id: 3,
-    title: "PostgreSQL",
+    title: 'PostgreSQL',
     url: `/images/Back-end/postgresql.png`,
   },
   {
     id: 4,
-    title: "Cassandra",
+    title: 'Cassandra',
     url: `/images/Back-end/cassandra.png`,
   },
 ];
@@ -67,42 +67,42 @@ export const backendSkillsCards = [
 export const otherSkills = [
   {
     id: 1,
-    title: "Git",
+    title: 'Git',
     url: `/images/Others/Git.png`,
   },
   {
     id: 2,
-    title: "Jira",
+    title: 'Jira',
     url: `/images/Others/jira.png`,
   },
   {
     id: 3,
-    title: "AzureDevOps",
+    title: 'AzureDevOps',
     url: `/images/Others/azure.png`,
   },
   {
     id: 4,
-    title: "RabbitMQ",
+    title: 'RabbitMQ',
     url: `/images/Others/rabbitmq.png`,
   },
   {
     id: 5,
-    title: "Ubuntu",
+    title: 'Ubuntu',
     url: `/images/Others/Ubuntu.png`,
   },
   {
     id: 5,
-    title: "Confluence",
+    title: 'Confluence',
     url: `/images/Others/confluence.png`,
   },
   {
     id: 5,
-    title: "Agile",
+    title: 'Agile',
     url: `/images/Others/agile.png`,
   },
   {
     id: 5,
-    title: "Postman",
+    title: 'Postman',
     url: `/images/Others/postman.png`,
   },
 ];
@@ -110,22 +110,22 @@ export const otherSkills = [
 export const projects1 = [
   {
     id: 1,
-    project: "Hydra : Access Management & Security Tool",
+    project: 'Hydra : Access Management & Security Tool',
     responsibilities: [
-      "Successfully developed a product from scratch using React.",
-      "Implemented real-time data updates using WebSocket.",
-      "Improved application security by integrating advanced authentication mechanisms.",
-      "Collaborated with the QA team to ensure high product quality.",
+      'Successfully developed a product from scratch using React.',
+      'Implemented real-time data updates using WebSocket.',
+      'Improved application security by integrating advanced authentication mechanisms.',
+      'Collaborated with the QA team to ensure high product quality.',
     ],
   },
   {
     id: 2,
-    project: "Street Light Management System",
+    project: 'Street Light Management System',
     responsibilities: [
-      "Worked as a full-stack developer, integrating front-end and back-end systems.",
-      "Built a user-friendly dashboard for real-time monitoring and control of street lights.",
-      "Reduced system downtime by implementing efficient error-handling mechanisms.",
-      "Ensured data integrity using a distributed database system with Cassandra.",
+      'Worked as a full-stack developer, integrating front-end and back-end systems.',
+      'Built a user-friendly dashboard for real-time monitoring and control of street lights.',
+      'Reduced system downtime by implementing efficient error-handling mechanisms.',
+      'Ensured data integrity using a distributed database system with Cassandra.',
     ],
   },
 ];
@@ -133,22 +133,22 @@ export const projects1 = [
 export const projects2 = [
   {
     id: 3,
-    project: "Limbach: Project Versioning & Estimation System",
+    project: 'Limbach: Project Versioning & Estimation System',
     responsibilities: [
-      "Transitioned from React to Angular and quickly mastered the framework.",
-      "Implemented complex data manipulations and visualizations using SpreadJS.",
-      "Wrote and maintained unit tests using Jest.",
-      "Created locking mechanisms for shared spreadsheets to prevent data corruption.",
-      "Reduced bug resolution time by integrating effective debugging tools.",
+      'Transitioned from React to Angular and quickly mastered the framework.',
+      'Implemented complex data manipulations and visualizations using SpreadJS.',
+      'Wrote and maintained unit tests using Jest.',
+      'Created locking mechanisms for shared spreadsheets to prevent data corruption.',
+      'Reduced bug resolution time by integrating effective debugging tools.',
     ],
   },
   {
     id: 4,
-    project: "Darisni: EdTech Platform",
+    project: 'Darisni: EdTech Platform',
     responsibilities: [
-      "Integrated RESTful APIs and implemented responsive web design.",
-      "Worked with React and TypeScript for frontend development.",
-      "Collaborated with the team using Jira and Bitbucket for task management and version control.",
+      'Integrated RESTful APIs and implemented responsive web design.',
+      'Worked with React and TypeScript for frontend development.',
+      'Collaborated with the team using Jira and Bitbucket for task management and version control.',
     ],
   },
 ];
@@ -156,13 +156,13 @@ export const projects2 = [
 export const projects3 = [
   {
     id: 5,
-    project: " NACHA – Bank Payment Clearing System",
+    project: ' NACHA – Bank Payment Clearing System',
     responsibilities: [
-      "Participated in a modernization project migrating the payment system from mainframe to a modern React-based web application",
-      "Contributed to the complete rewrite of the application with a focus on performance and usability",
-      "Developed reusable React components to streamline development and maintain design consistency",
-      "Worked collaboratively with Business Analysts for wireframe interpretation and functional suggestions",
-      "Delivered on a tight project timeline where timely quality delivery was critical",
+      'Participated in a modernization project migrating the payment system from mainframe to a modern React-based web application',
+      'Contributed to the complete rewrite of the application with a focus on performance and usability',
+      'Developed reusable React components to streamline development and maintain design consistency',
+      'Worked collaboratively with Business Analysts for wireframe interpretation and functional suggestions',
+      'Delivered on a tight project timeline where timely quality delivery was critical',
     ],
   },
 ];
@@ -175,8 +175,8 @@ export const jiggleVariants = {
     transition: {
       duration: 1,
       repeat: Infinity,
-      repeatType: "loop",
-      ease: "easeInOut",
+      repeatType: 'loop',
+      ease: 'easeInOut',
     },
   },
 };
@@ -188,7 +188,7 @@ export const oscillateVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
 };
@@ -202,13 +202,13 @@ export const getRandomfloatingVariant = () => {
       transition: {
         duration: 2,
         repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-        delay: Math.random() * 4
+        repeatType: 'reverse',
+        ease: 'easeInOut',
+        delay: Math.random() * 4,
       },
     },
-  }
-}
+  };
+};
 export const floatingVariants = {
   animate: {
     y: [-5, 5],
@@ -216,9 +216,9 @@ export const floatingVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      repeatType: "reverse",
-      ease: "easeInOut",
-      delay: Math.random() * 2
+      repeatType: 'reverse',
+      ease: 'easeInOut',
+      delay: Math.random() * 2,
     },
   },
 };
@@ -231,8 +231,8 @@ export const wobbleVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      repeatType: "loop",
-      ease: "easeInOut",
+      repeatType: 'loop',
+      ease: 'easeInOut',
     },
   },
 };
@@ -244,13 +244,13 @@ export const getTextRevealVariantUp = () => {
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        repeatType: "reverse",
+        repeatType: 'reverse',
         repeatDelay: 1,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
-  }
-}
+  };
+};
 
 export const getTextRevealVariantDown = () => {
   return {
@@ -259,29 +259,29 @@ export const getTextRevealVariantDown = () => {
       transition: {
         duration: 1,
         repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
+        repeatType: 'reverse',
+        ease: 'easeInOut',
       },
     },
-  }
-}
+  };
+};
 
 export const navItems = [
-  { title: "About Me", href: "#about-me", delay: 0.5 },
-  { title: "Skills", href: "#my-skills", delay: 0.7 },
-  { title: "Experience", href: "#my-experience", delay: 0.9 },
-  { title: "Contact Me", href: "#contact-me", delay: 1.1 }
+  { title: 'About Me', href: '#about-me', delay: 0.5 },
+  { title: 'Skills', href: '#my-skills', delay: 0.7 },
+  { title: 'Experience', href: '#my-experience', delay: 0.9 },
+  { title: 'Contact Me', href: '#contact-me', delay: 1.1 },
 ];
 
 export const textVariants = {
   hidden: { y: 200, opacity: 0 },
-  visible: (delay) => ({
-      y: 0,
-      opacity: 1,
-      transition: {
-          duration: 0.8,
-          delay,
-          ease: "easeOut"
-      }
-  })
+  visible: delay => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay,
+      ease: 'easeOut',
+    },
+  }),
 };
