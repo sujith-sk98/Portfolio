@@ -62,7 +62,7 @@ const AboutMeComponent = () => {
               Node.js. My passion lies in crafting intuitive and
               high-performance applications, and I am always eager to leverage
               my skills to contribute to dynamic teams and drive impactful
-              projects forward."
+              projects forward. this is the edit"
             </motion.p>
 
             <div className={style.buttons}>
