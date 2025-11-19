@@ -1,13 +1,13 @@
 export const frontEndSkillCards = [
   {
     id: 1,
-    title: 'Angular',
-    url: `/images/Front-end/Angular.png`,
+    title: 'React',
+    url: `/images/Front-end/React.png`,
   },
   {
     id: 2,
-    title: 'React',
-    url: `/images/Front-end/React.png`,
+    title: 'Angular',
+    url: `/images/Front-end/Angular.png`,
   },
   {
     id: 3,
@@ -36,8 +36,13 @@ export const frontEndSkillCards = [
   },
   {
     id: 8,
+    title: 'Material UI',
+    url: `/images/Front-end/spreadjs.jpg`,
+  },
+  {
+    id: 9,
     title: 'Sass',
-    url: `/images/Front-end/sass.png`,
+    url: `/images/Front-end/MaterialUI.png`,
   },
 ];
 
@@ -163,6 +168,18 @@ export const projects3 = [
       'Developed reusable React components to streamline development and maintain design consistency',
       'Worked collaboratively with Business Analysts for wireframe interpretation and functional suggestions',
       'Delivered on a tight project timeline where timely quality delivery was critical',
+    ],
+  },
+  {
+    id: 6,
+    project: 'Fund and Tax Management System',
+    responsibilities: [
+      'Developed and maintained a comprehensive fund and tax management system using React for the frontend',
+      'Led the complete rewrite of the application, enhancing user experience and performance',
+      'Led daily standup calls and participated in sprint planning and retrospectives to ensure agile development practices',
+      'Collaborated with BAs to translate wireframes into functional components and suggest improvements',
+      'Ensured timely delivery of high-quality features in a fast-paced development environment',
+      'Implemented role-based access control to enhance security and user management',
     ],
   },
 ];
