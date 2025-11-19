@@ -27,22 +27,22 @@ export const frontEndSkillCards = [
   {
     id: 6,
     title: 'TypeScript',
-    url: `/images/Front-end/TypeScript.png`,
+    url: `/images/Front-end/Typescript.png`,
   },
   {
     id: 7,
     title: 'SpreadJs',
-    url: `/images/Front-end/spreadjs.jpg`,
+    url: `/images/Front-end/spreadJs.jpg`,
   },
   {
     id: 8,
     title: 'Material UI',
-    url: `/images/Front-end/spreadjs.jpg`,
+    url: `/images/Front-end/MaterialUI.png`,
   },
   {
     id: 9,
     title: 'Sass',
-    url: `/images/Front-end/MaterialUI.png`,
+    url: `/images/Front-end/sass.png`,
   },
 ];
 
