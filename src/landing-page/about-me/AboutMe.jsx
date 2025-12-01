@@ -21,7 +21,7 @@ const AboutMeComponent = () => {
   const y = useTransform(forDescription, [0, 1], [500, 0]);
 
   const stats = [
-    { icon: <Briefcase size={24} />, value: '3.5+', label: 'Years Experience' },
+    { icon: <Briefcase size={24} />, value: '4+', label: 'Years Experience' },
     { icon: <Code size={24} />, value: '6+', label: 'Major Projects' },
     { icon: <Coffee size={24} />, value: '∞', label: 'Cups of Coffee' },
   ];
@@ -67,8 +67,8 @@ const AboutMeComponent = () => {
               <p className={style.description}>
                 I am a dedicated{' '}
                 <span className={style.highlight}>software developer</span> with{' '}
-                <span className={style.highlight}>3.5 years of experience</span>
-                , specializing in front-end technologies like{' '}
+                <span className={style.highlight}>4 years of experience</span>,
+                specializing in front-end technologies like{' '}
                 <span className={style.highlight}>React</span> and{' '}
                 <span className={style.highlight}>Angular</span>. I also possess
                 hands-on experience in back-end development with{' '}
