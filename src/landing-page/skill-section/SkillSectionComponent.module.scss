@@ -3,17 +3,96 @@
 .mySkillsScreen {
     width: 100%;
     min-height: 100vh;
-    background-color: $primary-color;
-    padding-bottom: 5rem;
+    background: $gradient-primary;
+    padding: 5rem 2rem;
     overflow: hidden;
+    position: relative;
+    
+    // Gradient overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    
     h2 {
-        font-size: clamp(3rem, 5vw, 4rem);
+        font-size: clamp(3rem, 6vw, 5rem);
         margin: 0;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
         text-align: center;
-        color: $font-color-1;
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+        background: $gradient-accent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+        letter-spacing: -2px;
+        position: relative;
+        z-index: 1;
+    }
+}
 
+.skillsContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+    
+    @media (max-width: 768px) {
+        gap: 3rem;
+    }
+}
+
+.skillCategory {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+    
+    @media (max-width: 768px) {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.categoryHeader {
+    margin-bottom: 2rem;
+    
+    h3 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin: 0 0 1rem 0;
+        font-weight: 700;
+    }
+}
+
+.headerLine {
+    height: 3px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1.5rem;
     }
 }

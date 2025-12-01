@@ -2,42 +2,21 @@ import React from 'react';
 import styles from './SkillCardComponent.module.scss';
 import { motion } from 'motion/react';
 
-const SkillCardComponent = ({ card }) => {
+const SkillCardComponent = ({ card, accentColor }) => {
   return (
-    <div className={styles.skillCardDiv}>
-      <motion.div
-        className={styles.skillCardImage}
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-        whileTap={{
-          scale: 1.5,
-        }}
-        whileHover={{
-          scale: 1.1,
-        }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-          transition: {
-            opacity: {
-              duration: 0.5,
-              ease: 'easeIn',
-            },
-            scale: {
-              duration: 0.5,
-              ease: 'easeIn',
-            },
-          },
-        }}
-      ></motion.div>
-      <div className={styles.SkillCardTitle}>
+    <motion.div
+      className={styles.skillCardDiv}
+      whileHover={{ y: -10, scale: 1.05 }}
+      transition={{ type: 'spring', stiffness: 300 }}
+    >
+      <div className={styles.cardGlow} style={{ background: accentColor }} />
+      <div className={styles.skillCardImage}>
+        <img src={card.url} alt={card.title} />
+      </div>
+      <div className={styles.skillCardTitle}>
         <span>{card.title}</span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

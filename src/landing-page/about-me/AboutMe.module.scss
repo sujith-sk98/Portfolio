@@ -3,22 +3,38 @@
 
 .aboutMeScreen {
     min-height: 100vh;
-    background-color: $secondary-color;
+    background: $gradient-primary;
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;
+    position: relative;
+    
+    // Gradient overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
+        pointer-events: none;
+    }
     
     @media (max-width: 768px) {
-        padding: 1rem;
+        padding: 3rem 1rem;
     }
 }
 
 .contentWrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
     
     @media (max-width: 768px) {
         padding: 1rem;
@@ -26,70 +42,194 @@
 }
 
 .title {
-    font-size: clamp(3rem, 5vw, 4rem);
-    margin-bottom: 3rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 4rem;
     text-align: center;
-    color: $font-color-1;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: $gradient-accent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: -2px;
 }
 
 .aboutMeSection {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
     align-items: center;
-    gap: 4rem;
     
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 2rem;
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
         text-align: center;
     }
 }
 
-.myImage {
-    flex-shrink: 0;
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (max-width: 968px) {
+        margin: 0 auto;
+    }
+}
+
+.imageBorder {
+    position: relative;
+    width: clamp(250px, 30vw, 400px);
+    height: clamp(250px, 30vw, 400px);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    border: 3px solid transparent;
+    background: $gradient-accent;
+    padding: 3px;
+    animation: morphing 8s ease-in-out infinite;
     
     img {
-        width: clamp(200px, 25vw, 300px);
-        height: clamp(200px, 25vw, 300px);
-        border-radius: 50%;
-        border: 4px solid white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        &:hover {
-            transform: scale(1.05);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        animation: morphing 8s ease-in-out infinite;
+    }
+    
+    @keyframes morphing {
+        0%, 100% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        25% {
+            border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+        }
+        50% {
+            border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+        }
+        75% {
+            border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+        }
+    }
+}
+
+.floatingShape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    left: -20px;
+    background: $gradient-cool;
+    opacity: 0.3;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphing 8s ease-in-out infinite, float 6s ease-in-out infinite;
+    z-index: -1;
+    filter: blur(20px);
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(10px, 10px);
         }
     }
 }
 
 .textContent {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+}
+
+.descriptionCard {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+    }
 }
 
 .description {
-    color: $font-color-1;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    line-height: 1.6;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    color: $white;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    .highlight {
+        background: $gradient-accent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+    }
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     
     @media (max-width: 768px) {
-        font-size: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: $accent-cyan;
+        box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+    }
+}
+
+.statIcon {
+    color: $accent-cyan;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 800;
+    background: $gradient-accent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: $gray;
+    font-weight: 500;
 }
 
 .buttons {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1rem;
     
     @media (max-width: 768px) {
         flex-direction: column;
-        align-items: stretch;
         gap: 1rem;
     }
     
@@ -98,22 +238,32 @@
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
-        padding: 0.875rem 1.5rem;
-        border-radius: 8px;
+        padding: 1rem 2rem;
+        border-radius: 10px;
         border: none;
         font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
         
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
         }
         
-        &:active {
-            transform: translateY(0);
+        &:hover::before {
+            width: 300px;
+            height: 300px;
         }
         
         a {
@@ -122,25 +272,31 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            position: relative;
+            z-index: 1;
         }
     }
 }
 
 .primaryBtn {
-    background-color: $primary-color;
-    color: $font-color-1;
+    background: $gradient-accent;
+    color: $white;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
     
     &:hover {
-        background-color: color.adjust($primary-color, $lightness: 5%);
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
     }
 }
 
 .secondaryBtn {
-    background-color: transparent;
-    color: $primary-color;
-    border: 2px solid $primary-color;
+    background: transparent;
+    color: $white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     
     &:hover {
-        background-color: rgba($primary-color, 0.1);
+        border-color: $accent-cyan;
+        transform: translateY(-2px);
     }
 }

@@ -1,14 +1,14 @@
 @use '../../styles/variables' as *;
 
 .landingScreen {
-    background-color: $primary-color;
+    background: $gradient-primary;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
 
-    // Modern gradient background
+    // Animated gradient overlay
     &::before {
         content: '';
         position: absolute;
@@ -16,130 +16,333 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 60%);
+        background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
         pointer-events: none;
+        animation: pulse 10s ease-in-out infinite;
     }
 
-    nav {
-        display: flex;
-        justify-content: flex-end; /* Aligned to the right */
-        padding: 1rem 2.5rem; /* Increased right padding for more space */
-        /* Removed backdrop-filter for blur effect */
-        background-color: transparent; /* Totally transparent initially */
-        /* Removed initial border and shadow */
-        width: 95%;
-        z-index: 100;
-        position: fixed; /* Make it sticky */
-        top: 0;
-        left: 0;
-        transition: background-color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
+    @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+}
+
+// Particle animation
+.particleContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: $gradient-accent;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+// Modern Navigation
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+    
+    &.scrolledNav {
+        background: rgba(10, 14, 39, 0.8);
+        backdrop-filter: blur(2px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 4rem;
+        
+        .navLogo span {
+            background: $gradient-accent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        padding: 1rem 1.5rem;
         
         &.scrolledNav {
-            /* No background, border, or shadow on the nav itself */
+            padding: 0.75rem 1.5rem;
+        }
+    }
+}
 
-            .navItem {
-                background-color: rgba(255, 255, 255, 0.3); /* Glass effect for capsules */
-                border-radius: 25px; /* Oval shape */
-                padding: 0.5rem 1rem; /* Adjust padding for capsule size */
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle lift */
-                transition: all 0.3s ease; /* Smooth transition for capsule appearance */
-                backdrop-filter: blur(3px); /* Added more blur for glass effect */
+.navLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $white;
+    z-index: 2;
+    
+    svg {
+        color: $accent-cyan;
+    }
+    
+    span {
+        transition: all 0.3s ease;
+    }
+}
 
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.5); /* Slightly more opaque on hover */
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced lift on hover */
-                    transform: translateY(-2px); /* Slight upward movement */
-                }
+.navItems {
+    display: flex;
+    gap: 3.5rem;
+    z-index: 2;
+    
+    @media (max-width: 768px) {
+        gap: 1rem;
+    }
+}
 
-                a {
-                    color: $dark-font-color; /* Dark font color when scrolled */
-
-                    &:hover {
-                        color: $font-color-1; /* Font color to white on hover */
-                    }
-
-                    &::after {
-                        background-color: $dark-font-color;
-                    }
-                }
+.navItem {
+    a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1rem;
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: all 0.3s ease;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $gradient-accent;
+            transition: width 0.3s ease;
+        }
+        
+        &:hover {
+            color: $accent-cyan;
+            
+            &::after {
+                width: 100%;
             }
         }
         
         @media (max-width: 768px) {
-            padding: 0.5rem 0.5rem; /* Reduced padding for mobile */
-            justify-content: space-between; /* Distribute items evenly */
-        }
-
-        .navItem {
-            margin: 0 0.5rem; /* Reduced margin between items */
-            position: relative;
-            transition: all 0.3s ease; /* Smooth transition for capsule appearance */
-            
-            &:last-child {
-                margin-right: 0.5rem; /* Adjusted for mobile */
-            }
-            
-            @media (max-width: 768px) {
-                margin: 0 0.2rem; /* Further reduced margin for mobile */
-
-                &.scrolledNav {
-                    padding: 0.3rem 0.6rem; /* Smaller padding for mobile capsules */
-                }
-            }
-
-            a {
-                text-decoration: none;
-                color: $secondary-color;
-                font-size: 1rem; /* Slightly smaller font size */
-                font-weight: 500;
-                letter-spacing: 0.5px;
-                padding: 0.75rem 1rem; /* Increased padding for better click area */
-                transition: all 0.3s ease;
-
-                @media (max-width: 768px) {
-                    font-size: 0.65rem; /* Even smaller font size for mobile */
-                    padding: 0.4rem 0.3rem; /* Adjusted padding for vertical centering */
-                }
-
-                /* Underline removed */
-
-                &:hover {
-                    /* No specific hover effect for initial state */
-                }
-            }
+            font-size: 0.75rem;
         }
     }
+}
 
-    .landingContent {
-        flex: 1;
+// Main Content
+.landingContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+        padding: 0 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+.tagline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $accent-cyan;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+    svg {
+        animation: rotate 3s linear infinite;
+    }
+    
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+}
+
+.mainTitle {
+    h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 8vw, 6rem);
+        font-weight: 800;
+        line-height: 1.1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 0 2rem;
-        margin-top: 4rem;
-        .firstLine, .secondLine{
-            font-size: 3rem;
-            span{
-                display: inline-block;
-                margin-right: 3rem;
-            }
-
-            h1{
-                margin: 0;
-                color: $font-color-1;
-            }
+        gap: 0.5rem;
+        
+        .greeting {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-weight: 400;
+            color: $gray;
         }
-        @media (max-width: 768px) {
-            padding: 0 1rem;
-            margin-top: 1rem;
-            gap: 3rem;
-            .firstLine, .secondLine{
-                font-size: 2rem;
-                span{
-                    margin-right: 1rem;
-                }
-            }
+        
+        .name {
+            background: $gradient-accent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite;
         }
+    }
+}
 
+.subtitle {
+    max-width: 600px;
+    
+    p {
+        margin: 0;
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+        color: $white;
+        font-weight: 300;
+        
+        &.subtext {
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            color: $gray;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 1rem;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+        padding: 1.2rem 2.5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        &:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        span {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.primaryCta {
+    background: $gradient-accent;
+    color: $white;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.secondaryCta {
+    background: transparent;
+    color: $white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    
+    &:hover {
+        border-color: $accent-cyan;
+        color: $accent-cyan;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.wheel {
+    width: 4px;
+    height: 10px;
+    background: $accent-cyan;
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
     }
 }

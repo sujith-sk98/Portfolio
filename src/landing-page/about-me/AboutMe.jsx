@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import style from './AboutMe.module.scss';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowDownToLine } from 'lucide-react';
+import { ArrowDownToLine, Briefcase, Code, Coffee } from 'lucide-react';
 
 const AboutMeComponent = () => {
   const targetRef = useRef(null);
@@ -18,8 +18,13 @@ const AboutMeComponent = () => {
   const yTitle = useTransform(scrollYProgress, [0, 1], ['-50vh', '0vh']);
   const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const x = useTransform(forDescription, [0, 1], [500, 0]);
-  const button1x = useTransform(forDescription, [0, 1], [200, 0]);
-  const button2x = useTransform(forDescription, [0, 1], [-200, 0]);
+  const y = useTransform(forDescription, [0, 1], [500, 0]);
+
+  const stats = [
+    { icon: <Briefcase size={24} />, value: '3.5+', label: 'Years Experience' },
+    { icon: <Code size={24} />, value: '6+', label: 'Major Projects' },
+    { icon: <Coffee size={24} />, value: '∞', label: 'Cups of Coffee' },
+  ];
 
   return (
     <div className={style.aboutMeScreen} ref={targetRef} id="about-me">
@@ -30,7 +35,7 @@ const AboutMeComponent = () => {
 
         <div className={style.aboutMeSection}>
           <motion.div
-            className={style.myImage}
+            className={style.imageContainer}
             style={{ scale, opacity: scale }}
             transition={{
               duration: 1,
@@ -40,12 +45,15 @@ const AboutMeComponent = () => {
               damping: 10,
             }}
           >
-            <img src={`/images/my-image.jpeg`} alt="Sujith S Kumar" />
+            <div className={style.imageBorder}>
+              <img src={`/images/my-image.jpeg`} alt="Sujith S Kumar" />
+            </div>
+            <div className={style.floatingShape} />
           </motion.div>
 
           <div className={style.textContent}>
-            <motion.p
-              className={style.description}
+            <motion.div
+              className={style.descriptionCard}
               style={{ x, scale, opacity: scale }}
               transition={{
                 duration: 1.5,
@@ -56,26 +64,68 @@ const AboutMeComponent = () => {
                 delay: 0.8,
               }}
             >
-              "I am a dedicated software developer with 3.5 years of experience,
-              specializing in front-end technologies like React and Angular. I
-              also possess hands-on experience in back-end development with
-              Node.js. My passion lies in crafting intuitive and
-              high-performance applications, and I am always eager to leverage
-              my skills to contribute to dynamic teams and drive impactful
-              projects forward."
-            </motion.p>
+              <p className={style.description}>
+                I am a dedicated{' '}
+                <span className={style.highlight}>software developer</span> with{' '}
+                <span className={style.highlight}>3.5 years of experience</span>
+                , specializing in front-end technologies like{' '}
+                <span className={style.highlight}>React</span> and{' '}
+                <span className={style.highlight}>Angular</span>. I also possess
+                hands-on experience in back-end development with{' '}
+                <span className={style.highlight}>Node.js</span>.
+              </p>
+              <p className={style.description}>
+                My passion lies in crafting{' '}
+                <span className={style.highlight}>intuitive</span> and{' '}
+                <span className={style.highlight}>
+                  high-performance applications
+                </span>
+                , and I am always eager to leverage my skills to contribute to
+                dynamic teams and drive impactful projects forward.
+              </p>
+            </motion.div>
+
+            <motion.div className={style.statsGrid}>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className={style.statCard}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.05,
+                    transition: { delay: 0, duration: 0.1 },
+                  }}
+                  transition={{
+                    duration: 1.5 + index * 0.3,
+                    ease: 'easeOut',
+                    type: 'spring',
+                    stiffness: 50,
+                    damping: 10,
+                  }}
+                >
+                  <div className={style.statIcon}>{stat.icon}</div>
+                  <div className={style.statValue}>{stat.value}</div>
+                  <div className={style.statLabel}>{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
 
             <div className={style.buttons}>
               <motion.button
-                style={{ x: button1x, scale }}
                 className={style.primaryBtn}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <a href="#contact-me">Contact Me</a>
               </motion.button>
 
               <motion.button
-                style={{ x: button2x, scale }}
                 className={style.secondaryBtn}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <ArrowDownToLine size={'1.2rem'} />
                 <a href="/Sujith_Resume.pdf" download="Sujith_resume.pdf">

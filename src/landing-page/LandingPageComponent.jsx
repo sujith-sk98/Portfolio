@@ -73,9 +73,9 @@ export const LandingPageComponent = () => {
       </section>
       <div
         onClick={handleScrollClick}
-        class={`${style.scrollIndicator} ${isAtBottom ? style.hidden : ''}`}
+        className={`${style.scrollIndicator} ${isAtBottom ? style.hidden : ''}`}
       >
-        <span class={style.arrow}></span>
+        <span className={style.arrow}></span>
       </div>
     </>
   );

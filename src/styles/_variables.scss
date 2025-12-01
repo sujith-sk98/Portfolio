@@ -1,6 +1,61 @@
-$primary-color: #34353a;
-$secondary-color: #ffc86b;
-$secondary-color-light: #efbf6b;
-$secondary-color-2: #d9dbdc;
-$font-color-1: #ffffff;
-$dark-font-color: #333333;
+// Modern Dark Theme Color Palette
+$primary-dark: #0a0e27;
+$primary-navy: #1a1f3a;
+$primary-blue: #2d3561;
+
+// Accent Colors - Vibrant Gradients
+$accent-cyan: #00d4ff;
+$accent-purple: #a855f7;
+$accent-pink: #ec4899;
+$accent-orange: #f97316;
+$accent-yellow: #fbbf24;
+
+// Accent Colors - others
+$accent-turqiose-start: #136a8a;
+$accent-turqoise-end: #267871;
+
+$between-the-clouds-start: #ffffff;
+$between-the-clouds-end: #ffffff;
+
+$man-of-steel-start: #780206;
+$man-of-steel-end: #061161;
+
+
+// Neutral Colors
+$white: #ffffff;
+$light-gray: #f3f4f6;
+$gray: #9ca3af;
+$dark-gray: #4b5563;
+$almost-black: #111827;
+
+// Semantic Colors
+$success: #10b981;
+$warning: #f59e0b;
+$error: #ef4444;
+
+// Background Gradients
+$gradient-primary: linear-gradient(135deg, $primary-dark 0%, $primary-navy 50%, $primary-blue 100%);
+
+
+// $gradient-accent: linear-gradient(135deg, $accent-cyan 0%, $accent-purple 50%, $accent-pink 100%);
+// $gradient-accent: linear-gradient(135deg, $accent-turqiose-start 0%, $accent-turqoise-end 100%);
+// $gradient-accent: linear-gradient(135deg, $man-of-steel-start 0%, $man-of-steel-end 100%);
+// $gradient-accent: linear-gradient(135deg, rgb(9, 86, 174) 0%, rgba(4,56,126,1) 50%, rgba(85,245,221,1) 100%);
+$gradient-accent: linear-gradient(135deg, #02AABD 0%,#02AABD 20%,  #00CDAC 100%);
+
+
+$gradient-warm: linear-gradient(135deg, $accent-orange 0%, $accent-pink 50%, $accent-purple 100%);
+$gradient-cool: linear-gradient(135deg, $accent-cyan 0%, $accent-purple 100%);
+
+// Text Colors
+$text-primary: $white;
+$text-secondary: $gray;
+$text-dark: $almost-black;
+
+// Legacy support (for gradual migration)
+$primary-color: $primary-navy;
+$secondary-color: $accent-cyan;
+$secondary-color-light: $accent-yellow;
+$secondary-color-2: $light-gray;
+$font-color-1: $white;
+$dark-font-color: $almost-black;
